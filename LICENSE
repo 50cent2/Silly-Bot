@@ -13,3 +13,13 @@ fn main() {
         thread::sleep(Duration::from_secs(1));
     }
 }
+
+
+
+[package]
+name = "rust_bot"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+dotenv = "0.15"
