@@ -30,7 +30,7 @@ from discord.ext import commands
 
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix="!", intents=intents)
-
+python3 bot.py
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user}!")
