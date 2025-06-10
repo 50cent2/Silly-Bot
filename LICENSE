@@ -30,13 +30,16 @@ from discord.ext import commands
 
 intents = discord.Intents.default()
 bot = commands.Bot(command_prefix="!", intents=intents)
-python3 bot.py
-@bot.event
-async def on_ready():
-    print(f"Logged in as {bot.user}!")
+// main.rs
+use teloxide::prelude::*;
 
-@bot.command()
-async def ping(ctx):
-    await ctx.send("Pong!")
+#[tokio::main]
+async fn main() {
+    let bot = Bot::from_env();
 
-bot.run("YOUR_BOT_TOKEN")
+    teloxide::repl(bot, |message| async move {
+        message.answer("Hello from Rust!").send().await?;
+        Ok(())
+    })
+    .await;
+}
