@@ -1,3 +1,4 @@
+git pull origin main
 import os
 from dotenv import load_dotenv
 import discord
@@ -17,8 +18,6 @@ async def ping(ctx):
     with open("../shared.txt", "w") as f:
         f.write("Python bot received a ping command!")
     await ctx.send("Ping received. Passing message to Rust bot.")
-
-bot.run(token)
 # bot.py
 import discord
 from discord.ext import commands
