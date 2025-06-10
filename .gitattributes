@@ -35,5 +35,3 @@ async def ping(ctx):
     await ctx.send("Pong!")
 
 bot.run("YOUR_BOT_TOKEN")
-python3 main.py 
-mv bot.py main.py
